@@ -1,7 +1,7 @@
 package com.controller;
 
 import com.Service.OrderService;
-import com.domain.Item;
+import com.domain.FoodMenu;
 import com.domain.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -26,12 +26,17 @@ public class OrderServiceController {
     @RequestMapping(value = "/OrderService", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
     public void Order(@RequestBody Order orders){
-        this.service.placeOrder(orders);
+        this.service.saveOrder(orders);
     }
 
     @RequestMapping(value = "/OrderService", method = RequestMethod.DELETE)
     void delete(){
         this.service.deleteAll();
+    }
+
+    @RequestMapping(value = "/OrderService", method = RequestMethod.GET)
+    public List<Order> findAll(){
+        return this.service.findAllOrders();
     }
 
     @RequestMapping(value = "/OrderService/{orderId}", method = RequestMethod.DELETE)
@@ -40,14 +45,9 @@ public class OrderServiceController {
     }
 
 
-    @RequestMapping(value = "/OrderService", method = RequestMethod.GET)
-    public List<Order> findAll(){
-        return this.service.findAllOrders();
-    }
-
-    @RequestMapping(value = "/OrderService/Items/{resturantName}", method = RequestMethod.GET)
-    public List<Item> findItems(@PathVariable String resturantName){
-        return this.service.getItemsByRestaurantName(resturantName);
+    @RequestMapping(value = "/OrderService/Items/{restaurantName}", method = RequestMethod.GET)
+    public List<FoodMenu> findOrder(@PathVariable String restaurantName){
+        return this.service.getOrderByRestaurantName(restaurantName);
     }
 
     @RequestMapping(value = "/OrderService/Orders/{orderId}", method = RequestMethod.GET)

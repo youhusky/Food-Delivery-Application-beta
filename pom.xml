@@ -13,6 +13,9 @@
         <module>Paymentservice</module>
         <module>Orderservice</module>
         <module>RestaurantService</module>
+        <module>platform</module>
+        <module>edgingservice</module>
+
     </modules>
 
 

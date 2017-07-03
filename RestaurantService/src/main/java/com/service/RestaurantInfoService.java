@@ -15,19 +15,18 @@ public class RestaurantInfoService {
     @Autowired
     private RestaurantRepository repository;
 
-
-
     public void saveRestaurantInfo(List<RestaurantInfo> restaurantInfos) {
         this.repository.save(restaurantInfos);
     }
-
-
     public List<RestaurantInfo> findByName(String name) {
         return repository.findAllByName(name);
     }
+    public List<RestaurantInfo> findAllBy(){
+        return this.repository.findAllBy();
 
-
-    public void deleteAll() {
+    }    public void deleteAll() {
         this.repository.deleteAll();
     }
+
+
 }

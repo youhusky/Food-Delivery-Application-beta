@@ -32,6 +32,11 @@ public class PaymentServiceController {
         return this.service.findAll();
     }
 
+    @RequestMapping(value = "/payment/{paymentId}", method = RequestMethod.GET)
+    public Payment findByPaymentId(@PathVariable Long paymentId){
+        return this.service.findByPaymentId(paymentId);
+    }
+
     @RequestMapping(value = "/payment", method = RequestMethod.DELETE)
     public void deleteAllPayment(){
         this.service.deleteAll();

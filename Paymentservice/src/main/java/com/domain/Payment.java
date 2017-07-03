@@ -33,19 +33,42 @@ public class Payment {
     private String expirationDate;
     private String securityCode;
 
+    private String considerTime;
+    private String state;
+
     public Payment(){};
     @JsonCreator
     public Payment(
             @JsonProperty("orderId") String orderId,
             @JsonProperty("cardNo") String cardNumber,
             @JsonProperty("price") double price,
+            @JsonProperty("date") String date,
             @JsonProperty("expirationDate") String expirationDate,
-            @JsonProperty("securityCode") String securityCode) {
+            @JsonProperty("securityCode") String securityCode,
+            @JsonProperty("considerTime") String considerTime,
+            @JsonProperty("state") String state) {
         this.orderId = orderId;
         this.price = price;
         this.date = new Date().toString();
         this.cardNo = cardNumber;
         this.expirationDate = expirationDate;
         this.securityCode = securityCode;
+        System.out.println(cardNo);
+        System.out.println(securityCode);
+        if(cardNo.length()<15 || securityCode.length()>4 && !checkValid(cardNo,expirationDate,securityCode)){
+            this.considerTime = "0";
+            this.state = "False Payment";
+        }
+        else{
+            this.state = "Finish";
+            this.considerTime = "From now on: "+String.valueOf((int)(Math.random()*55)+5) +"minutes";
+        }
     }
+
+    private boolean checkValid(String cardNo, String expirationDate, String securityCode) {
+//        Need to connect Bank Validaton Server to check this card is valid or not
+        return true;
+    }
+
+
 }

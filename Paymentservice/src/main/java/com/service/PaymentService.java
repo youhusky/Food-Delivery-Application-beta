@@ -15,11 +15,13 @@ public class PaymentService {
     @Autowired
     PaymentRepository repository;
 
-
     public List<Payment> findAll() {
         return this.repository.findAllBy();
     }
+    public Payment findByPaymentId(Long paymentId){
 
+        return this.repository.findByPaymentId(paymentId);
+    }
 
     public void deleteAll() {
         this.repository.deleteAllBy();

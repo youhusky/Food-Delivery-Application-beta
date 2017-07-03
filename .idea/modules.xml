@@ -5,7 +5,11 @@
       <module fileurl="file://$PROJECT_DIR$/Orderservice/Orderservice.iml" filepath="$PROJECT_DIR$/Orderservice/Orderservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/Paymentservice/Paymentservice.iml" filepath="$PROJECT_DIR$/Paymentservice/Paymentservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/RestaurantService/RestaurantService.iml" filepath="$PROJECT_DIR$/RestaurantService/RestaurantService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/edgingservice/edgingservice.iml" filepath="$PROJECT_DIR$/edgingservice/edgingservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/platform/eureka/eureka.iml" filepath="$PROJECT_DIR$/platform/eureka/eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/fooddeliveryserviceNew.iml" filepath="$PROJECT_DIR$/fooddeliveryserviceNew.iml" />
+      <module fileurl="file://$PROJECT_DIR$/platform/hystrix-dashboard/hystrix-dashboard.iml" filepath="$PROJECT_DIR$/platform/hystrix-dashboard/hystrix-dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/platform/platform.iml" filepath="$PROJECT_DIR$/platform/platform.iml" />
     </modules>
   </component>
 </project>

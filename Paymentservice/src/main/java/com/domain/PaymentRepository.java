@@ -10,11 +10,13 @@ import java.util.List;
 /**
  * Created by joshua on 7/2/17.
  */
-@RepositoryRestResource(path = "paymenInfo")
+@RepositoryRestResource(path = "paymentInfo")
 public interface PaymentRepository extends JpaRepository<Payment,Long> {
     @RestResource(path = "payment")
     List<Payment> findAllBy();
     @RestResource(path = "delete")
     @Transactional
     void deleteAllBy();
+
+    Payment findByPaymentId(Long paymentId);
 }

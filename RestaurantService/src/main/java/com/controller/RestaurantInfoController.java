@@ -18,11 +18,6 @@ public class RestaurantInfoController {
 
     private RestaurantInfoService service;
 
-
-
-
-
-
     @Autowired
     public RestaurantInfoController(RestaurantInfoService service) {
         this.service = service;
@@ -34,12 +29,14 @@ public class RestaurantInfoController {
         this.service.saveRestaurantInfo(restaurantInfos);
 
     }
-
-
-
     @RequestMapping(value = "/RestaurantInfo", method = RequestMethod.DELETE)
-    void delete(){
+    public void delete(){
         this.service.deleteAll();
+    }
+
+    @RequestMapping(value = "/RestaurantInfo", method = RequestMethod.GET)
+    public void findAllBy(){
+        this.service.findAllBy();
     }
 
 
@@ -47,6 +44,7 @@ public class RestaurantInfoController {
     public List<RestaurantInfo> findRestaurant(@PathVariable String name){
         return this.service.findByName(name);
     }
+
 
 
     @RequestMapping(value = "/RestaurantInfo/{name}/Items", method = RequestMethod.GET)

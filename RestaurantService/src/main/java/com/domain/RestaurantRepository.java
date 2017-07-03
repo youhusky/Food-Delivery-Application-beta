@@ -19,6 +19,4 @@ public interface RestaurantRepository extends MongoRepository<RestaurantInfo, Lo
     @RestResource(path = "Restaurant")
     List<RestaurantInfo> findAllBy();
 
-    @RestResource(path = "delete")
-    void deleteAllBy();
 }

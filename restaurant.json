@@ -1,0 +1,33 @@
+[
+  {
+    "menuItems": [
+      {
+        "itemName": "applecake",
+        "itemPrice": 21
+      },
+      {
+        "itemName": "bananapie",
+        "itemPrice": 4
+      },
+      {
+        "itemName": "fishcan",
+        "itemPrice": 19
+      },
+      {
+        "itemName": "pizza",
+        "itemPrice": 10
+      },
+      {
+        "itemName": "beef",
+        "itemPrice": 20
+      },
+      {
+        "itemName": "rice",
+        "itemPrice": 1.5
+      }
+    ],
+    "id": "504",
+    "name": "Restaurant in California",
+    "desciption": "RESTAURANT 1"
+  }
+]

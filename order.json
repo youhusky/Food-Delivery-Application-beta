@@ -1,0 +1,12 @@
+{
+  "orderId": "1",
+  "items": [
+    {
+      "foodName": "beef",
+      "foodPrice": 20,
+      "quantity": 3,
+      "note": "delicious"
+    }
+  ],
+  "deliveryAddress": "MountainView"
+}

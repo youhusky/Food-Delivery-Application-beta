@@ -19,31 +19,30 @@ import java.util.List;
 @Data
 @Document
 public class Order {
+
     @Id
     @GeneratedValue
     private String orderId;
 
-    private List<ItemInfo> items;
+    private List<foodInfo> items;
     private String date;
 
     private String deliveryAddress;
 
     private double totalPrice;
 
-    private ItemInfo itemInfo;
+    private foodInfo itemInfo;
 
     @JsonCreator
     public Order(@JsonProperty("orderId") String orderId,
-                 @JsonProperty("items") List<ItemInfo> items,
+                 @JsonProperty("items") List<foodInfo> items,
                  @JsonProperty("date") String date,
                  @JsonProperty("deliveryAddress") String deliveryAddress,
                  @JsonProperty("totalPrice") double totalPrice){
-//        this.orderId = orderId;
-        this.items = new ArrayList<ItemInfo>(items);
+        this.orderId = orderId;
+        this.items = new ArrayList<foodInfo>(items);
         this.date = new Date().toString();
         this.deliveryAddress = deliveryAddress;
-        for(ItemInfo n : items){
-            this.totalPrice += n.itemPrice * n.quantity;
-        }
+        for(foodInfo i : items) this.totalPrice += i.foodPrice * i.quantity;
     }
 }

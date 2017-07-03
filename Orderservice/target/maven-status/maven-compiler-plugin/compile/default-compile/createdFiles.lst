@@ -1,8 +1,7 @@
 com/controller/OrderServiceController.class
-com/domain/ItemInfoRepository.class
 com/Service/OrderService.class
-com/domain/Item.class
 com/OrderApplication.class
+com/domain/foodInfo.class
+com/domain/FoodMenu.class
 com/domain/Order.class
-com/domain/ItemInfo.class
 com/domain/OrderRepository.class

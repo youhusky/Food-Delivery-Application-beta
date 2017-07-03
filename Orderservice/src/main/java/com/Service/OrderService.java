@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import javax.xml.ws.ServiceMode;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -22,16 +21,12 @@ public class OrderService {
     @Autowired
     private OrderRepository repository;
 
-    @Autowired
-    private ItemInfoRepository Itemrepository;
-
-
     public List<Order> findAllOrders() {
         return this.repository.findAllBy();
     }
 
 
-    public void placeOrder(Order orderInfo) {
+    public void saveOrder(Order orderInfo) {
         this.repository.save(orderInfo);
     }
 
@@ -42,7 +37,7 @@ public class OrderService {
 
 
     public void deleteById(String orderId) {
-        this.repository.deleteAllByOrderId(orderId);
+        this.repository.deleteByOrderId(orderId);
     }
 
 
@@ -50,29 +45,13 @@ public class OrderService {
         return this.repository.findByOrderId(orderId);
     }
 
-
-    public List<Item> getItemsByRestaurantName(String name) {
+    public List<FoodMenu> getOrderByRestaurantName(String name) {
         RestTemplate restTemplate = new RestTemplate();
         String url = itemsUrl + "/RestaurantInfo/"+name+"/Items";
-        Item[] totalItems = restTemplate.getForObject(url,Item[].class);
-        List<Item> res = new ArrayList<Item>();
+        FoodMenu[] totalItems = restTemplate.getForObject(url,FoodMenu[].class);
+        List<FoodMenu> res = new ArrayList<FoodMenu>();
         res.addAll(Arrays.asList(totalItems));
         return res;
 
-    }
-
-
-    public List<ItemInfo> displayAllItemsSelected() {
-        return this.Itemrepository.findAllBy();
-    }
-
-
-    public void saveItems(ItemInfo itemInfo) {
-        this.Itemrepository.save(itemInfo);
-    }
-
-
-    public void deleteAllItemsSelected() {
-        this.Itemrepository.deleteAllBy();
     }
 }
