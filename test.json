@@ -1,0 +1,33 @@
+[
+  {
+    "menuItems": [
+      {
+        "itemName": "a",
+        "itemPrice": 10
+      },
+      {
+        "itemName": "b",
+        "itemPrice": 42
+      },
+      {
+        "itemName": "c",
+        "itemPrice": 19
+      },
+      {
+        "itemName": "d",
+        "itemPrice": 51
+      },
+      {
+        "itemName": "e",
+        "itemPrice": 122
+      },
+      {
+        "itemName": "f",
+        "itemPrice": 153
+      }
+    ],
+    "id": "1213",
+    "name": "TEST",
+    "desciption": "RESTAURANT 1"
+  }
+]

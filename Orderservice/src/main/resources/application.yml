@@ -1,0 +1,8 @@
+server:
+  port: 9005
+spring:
+  application:
+    name: food-delivery-order
+
+URL:
+  food-delivery-resturant: http://localhost:9004
