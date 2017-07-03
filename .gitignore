@@ -3,5 +3,7 @@
 */*.iml
 .gitignore
 
-
+!/RestaurantService/target/
+!/Orderservice/target/
+!/Paymentservice/target/
 
