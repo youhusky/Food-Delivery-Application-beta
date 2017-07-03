@@ -24,12 +24,4 @@ nbdist/
 .nb-gradle/
 .gitignore
 .idea/
-Orderservice/
-Paymentservice/
-README.md
-RestaurantService/
-docker-compose.yml
-fooddeliveryserviceNew.iml
-pom.xml
-src/
-test.json
+
