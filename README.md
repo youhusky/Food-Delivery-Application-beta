@@ -11,8 +11,8 @@ Bozhao Li
   - [x] handle error (check length of cardNum and securityCode)
   - [x] security
 - [ ] Bonus
-  - [ ] UI to design a website(a little bit hard for me and time is limited)
-  - [x] MQ (still config this function)
+  - [?] UI to design a website(a little bit hard for me and time is limited)
+  - [?] MQ (still config this function)
   - [x] Spring Cloud circuit(like eureka,hystrix)
   - [x] Well Documented
  	
